@@ -1,6 +1,6 @@
 #Jake Krishnamurti
 
-#This dictionary is used to convert 16QAM voltage pairs to binary
+#Dictionary to convert 16QAM voltage pairs to binary
 conversion = {(1,1) : '1101', (1,3) : '1100', (1,-1) : '1111', (1,-3) : '1110', (3,1) : '1001', (3,3) : '1000', (3,-1) : '1011', (3,-3) : '1010', (-1,1) : '0101', (-1,3) : '0100', (-1,-1) : '0111', (-1,-3) : '0110', (-3,1) : '0001', (-3,3) : '0000', (-3,-1) : '0011', (-3,-3) : '0010'}
 
 def main():
@@ -29,7 +29,6 @@ def load_nibbles(filename):
     return nibbles_list
 
 
-
 def convert_nibbles(nibbles_list):
     binary_nibbles_list = []
 
@@ -43,35 +42,26 @@ def convert_nibbles(nibbles_list):
 
         if 0 <= I < 2:
             x = 1
-
         if I >= 2:
             x = 3
-
         if -2 < I < 0:
             x = -1
-
         if I <= -2:
             x = -3 
         
-
         Q = float(values[1])
         y = 0
 
         if 0 <= Q < 2:
             y = 1
-
         if Q >= 2:
             y = 3
-
         if -2 < Q < 0:
             y = -1
-
         if Q <= -2:
             y = -3
 
-
         binary_nibbles_list.append(conversion[(x,y)])
-
 
     bytes_list = []
 
@@ -106,9 +96,7 @@ def show_decode_info(nibbles_list, binary_nibbles_list, bytes_list):
                 print(bytes_list[byte_count], " gives ", "\"", '[ ]', "\"", sep = '')
                        
             byte_count = byte_count + 1
-
-            
+    
         nibble_count = nibble_count + 1  
-
 
 main()
