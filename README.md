@@ -1,5 +1,5 @@
 # 16QAM
-A Python program to decode a 16QAM signal
+A Python program to decode 16QAM signals
 
 Completed as part of CS 314 (Modern Data Communications) at the University of Auckland.
 
