@@ -61,6 +61,7 @@ def convert_nibbles(nibbles_list):
         if Q <= -2:
             y = -3
 
+        #Convert nibbles to binary
         binary_nibbles_list.append(conversion[(x,y)])
 
     bytes_list = []
