@@ -77,6 +77,7 @@ def show_decode_info(nibbles_list, binary_nibbles_list, bytes_list):
     nibble_count = 0
     byte_count = 0
     
+    #Print the info for each nibble. After every second nibble, print the byte info.
     for nibble in nibbles_list:
         #Print the binary nibble that the voltage pair decodes to
         if nibble_count % 2 == 0:
