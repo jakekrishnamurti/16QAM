@@ -34,7 +34,6 @@ def convert_nibbles(nibbles_list):
 
     #Round each voltage to either +/-1 or +/-3
     for nibble in nibbles_list:
-
         values = nibble.split(', ')
 
         I = float(values[0])
@@ -79,7 +78,6 @@ def show_decode_info(nibbles_list, binary_nibbles_list, bytes_list):
     byte_count = 0
     
     for nibble in nibbles_list:
-
         #Print the binary nibble that the voltage pair converts to
         if nibble_count % 2 == 0:
             print("(", nibble, ")", sep='', end = '')
