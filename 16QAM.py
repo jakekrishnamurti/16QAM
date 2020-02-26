@@ -78,12 +78,12 @@ def show_decode_info(nibbles_list, binary_nibbles_list, bytes_list):
     byte_count = 0
     
     for nibble in nibbles_list:
-        #Print the binary nibble that the voltage pair converts to
+        #Print the binary nibble that the voltage pair decodes to
         if nibble_count % 2 == 0:
             print("(", nibble, ")", sep='', end = '')
             print(" decodes as", binary_nibbles_list[nibble_count])
 
-        #Print the binary nibble that the voltage pair converts to and also the character that the combined byte represents
+        #Print the binary nibble that the voltage pair decodes to and also the character that the combined byte represents
         if nibble_count % 2 == 1:
             print("(", nibble, ")", sep='', end = '')
             print(" decodes as", binary_nibbles_list[nibble_count], "- together, ", end = '')
