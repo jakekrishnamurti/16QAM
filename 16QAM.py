@@ -4,14 +4,18 @@
 conversion = {(1,1) : '1101', (1,3) : '1100', (1,-1) : '1111', (1,-3) : '1110', (3,1) : '1001', (3,3) : '1000', (3,-1) : '1011', (3,-3) : '1010', (-1,1) : '0101', (-1,3) : '0100', (-1,-1) : '0111', (-1,-3) : '0110', (-3,1) : '0001', (-3,3) : '0000', (-3,-1) : '0011', (-3,-3) : '0010'}
 
 def main():
-    nibbles_list = load_nibbles("nibbles.txt") #Open the file containing the nibbles expressed as voltage pairs
+    #Open the file containing the nibbles expressed as voltage pairs
+    nibbles_list = load_nibbles("nibbles.txt") 
 
-    binary_nibbles_list, bytes_list = convert_nibbles(nibbles_list) #Convert each voltage pair into binary and combine to create bytes
-
+    #Convert each voltage pair into binary and combine to create bytes
+    binary_nibbles_list, bytes_list = convert_nibbles(nibbles_list) 
+    
+    #Print the decoded message
     for character in bytes_list:
-        print(chr(int(character, 2)), end = '') #Print the decoded message
+        print(chr(int(character, 2)), end = '') 
 
-    show_decode_info(nibbles_list, binary_nibbles_list, bytes_list) #Print information showing the decoding process
+    #Print information showing the decoding process
+    show_decode_info(nibbles_list, binary_nibbles_list, bytes_list) 
 
 
 def load_nibbles(filename):
